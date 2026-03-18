@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 
 const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
-  backgroundColor: "white",
   display: "swap",
   weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
@@ -31,9 +31,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${outfit.variable} font-sans antialiased bg-white`}
+        className={`${outfit.variable} font-sans antialiased bg-brand-white`}
       >
         <SmoothScroll>
+          <CustomCursor />
           {children}
         </SmoothScroll>
       </body>

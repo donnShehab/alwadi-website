@@ -7,15 +7,13 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-brand-white">
       <Navbar />
-
       <Hero />
-
       <CategorySection />
-
       <ProductionSection />
-
+      
+      {/* Immersive Product Categories */}
       <ProductSection
         category="Burger"
         id="burgers"
