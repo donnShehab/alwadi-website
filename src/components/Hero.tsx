@@ -62,39 +62,40 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Product Image Side */}
+        {/* Video / Product Side */}
         <motion.div 
-          initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-          className="relative aspect-square w-full"
+          className="relative aspect-video w-full rounded-[3rem] overflow-hidden shadow-2xl border border-brand-gray-mid"
         >
-          {/* Subtle Glow behind product */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-brand-orange/5 rounded-full blur-[100px]" />
-          
-          <div className="relative w-full h-full flex items-center justify-center">
-             <Image 
-              src="/images/hero_burger_cinematic.png" 
-              alt="Alwadi Signature Collection" 
-              width={800}
-              height={800}
-              className="object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.12)]"
-              priority
-            />
-          </div>
+          {/* Background Video */}
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+            poster="/images/hero_burger_cinematic.png"
+          >
+            <source src="https://video.wixstatic.com/video/60bb7a_3f0a9151da434ad4b035e2d4e13d58c6/1080p/mp4/file.mp4" type="video/mp4" />
+          </video>
+
+          {/* Overlay Gradient */}
+          <div className="absolute inset-0 bg-brand-orange/10 mix-blend-overlay pointer-events-none" />
 
           {/* Floating Ingredient Badge */}
           <motion.div 
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[20%] right-[10%] bg-white p-5 rounded-3xl shadow-xl border border-gray-50 flex items-center gap-4 z-20"
+            className="absolute top-[10%] right-[10%] bg-white/90 backdrop-blur-md p-5 rounded-3xl shadow-xl border border-white/20 flex items-center gap-4 z-20"
           >
              <div className="w-12 h-12 bg-brand-orange/10 rounded-2xl flex items-center justify-center text-brand-orange font-black">
                 100%
              </div>
              <div>
                 <div className="text-xs font-black uppercase tracking-tighter">Pure Poultry</div>
-                <div className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">No Preservatives</div>
+                <div className="text-[9px] text-gray-400 font-bold uppercase tracking-widest">Natural Goodness</div>
              </div>
           </motion.div>
         </motion.div>

@@ -10,22 +10,25 @@ const ProductionSection = () => {
       <div className="max-width-container">
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           
-          {/* Image Side */}
+          {/* Video Side */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="relative lg:h-[600px] rounded-[3rem] overflow-hidden shadow-2xl group"
+            className="relative lg:h-[600px] h-[400px] rounded-[3rem] overflow-hidden shadow-2xl group border border-brand-gray-mid"
           >
-             <Image 
-              src="/images/factory_interior.jpg" 
-              alt="Alwadi State-of-the-Art Factory" 
-              fill
-              className="object-cover transition-transform duration-[2000ms] group-hover:scale-105"
-            />
+             <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105"
+            >
+              <source src="https://video.wixstatic.com/video/60bb7a_3f0a9151da434ad4b035e2d4e13d58c6/1080p/mp4/file.mp4" type="video/mp4" />
+            </video>
             {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            <div className="absolute inset-0 bg-brand-black/10 opacity-60 group-hover:opacity-40 transition-opacity duration-1000" />
           </motion.div>
 
           {/* Content Side */}

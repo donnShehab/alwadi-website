@@ -1,6 +1,6 @@
 "use client"
 import React, { ReactNode, useEffect } from 'react'
-import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
+import { ReactLenis, useLenis } from 'lenis/react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
