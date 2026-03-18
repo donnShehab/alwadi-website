@@ -8,6 +8,8 @@ export interface Product {
   highlight?: string;
   nutrition?: string[];
   cookingTime?: string;
+  ingredients?: string[];
+  calories?: string;
 }
 
 export const products: Product[] = [
@@ -20,7 +22,9 @@ export const products: Product[] = [
     price: "JD 4.50",
     highlight: "Popular Choice",
     nutrition: ["22g Protein", "100% Breast", "Low Sodium"],
-    cookingTime: "8-10 mins"
+    cookingTime: "8-10 mins",
+    ingredients: ["Premium Chicken Breast", "Artisanal Spice Blend", "Onion Powder", "Natural Garlic Extract", "Pure Vegetable Oil"],
+    calories: "285 kcal / 100g"
   },
   {
     id: "b2",
@@ -31,7 +35,9 @@ export const products: Product[] = [
     price: "JD 5.25",
     highlight: "Spicy Trend",
     nutrition: ["24g Protein", "Zesty Spice", "Real Fillet"],
-    cookingTime: "10-12 mins"
+    cookingTime: "10-12 mins",
+    ingredients: ["Select Chicken Fillet", "Crushed Red Peppers", "Paprika Extract", "Heritage Crumbs", "Sea Salt"],
+    calories: "310 kcal / 100g"
   },
   {
     id: "br1",
@@ -42,7 +48,9 @@ export const products: Product[] = [
     price: "JD 3.75",
     highlight: "Family Pack",
     nutrition: ["White Meat", "No Preservatives", "Classic Taste"],
-    cookingTime: "6-8 mins"
+    cookingTime: "6-8 mins",
+    ingredients: ["Minced Chicken Breast", "Signature Flour Blend", "Sunflower Oil", "Traditional Seasoning", "No Added Artificials"],
+    calories: "260 kcal / 100g"
   },
   {
     id: "br2",
@@ -52,7 +60,9 @@ export const products: Product[] = [
     category: "Breaded",
     price: "JD 5.50",
     nutrition: ["Large Cut", "Crispy Texture", "High Protein"],
-    cookingTime: "12-15 mins"
+    cookingTime: "12-15 mins",
+    ingredients: ["Hand-Slicing Breast Meat", "Premium Breadcrumbs", "Black Pepper", "Mediterranean Herbs", "Natural Binders"],
+    calories: "295 kcal / 100g"
   },
   {
     id: "br3",
@@ -62,6 +72,8 @@ export const products: Product[] = [
     category: "Breaded",
     price: "JD 3.25",
     nutrition: ["Bite-Sized", "Crunchy", "Kid Friendly"],
-    cookingTime: "5-7 mins"
+    cookingTime: "5-7 mins",
+    ingredients: ["Clipped Chicken Pieces", "Crisp Master Breading", "Secret Spice Dust", "Pure Corn Oil", "Fresh Packaging"],
+    calories: "275 kcal / 100g"
   }
 ];
