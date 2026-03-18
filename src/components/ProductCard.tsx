@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Product } from '@/data/products'
-import { Plus, ShoppingBag, ArrowRight } from 'lucide-react'
+import { Plus, ArrowRight, Timer, Flame, ShieldCheck } from 'lucide-react'
 
 interface ProductCardProps {
   product: Product;
@@ -26,14 +26,19 @@ const ProductCard = ({ product }: ProductCardProps) => {
           className="object-contain p-10 transition-transform duration-1000 group-hover:scale-110"
         />
         
-        {/* Highlight Ribbon */}
-        {product.highlight && (
-          <div className="absolute top-6 left-6 z-10 bg-brand-orange text-white text-[8px] font-black uppercase tracking-[0.3em] px-3 py-1.5 rounded-full shadow-lg">
-             {product.highlight}
-          </div>
-        )}
+        {/* Quality Ribbon */}
+        <div className="absolute top-6 left-6 z-10 flex flex-col gap-2">
+           {product.highlight && (
+             <div className="bg-brand-orange text-white text-[8px] font-black uppercase tracking-[0.3em] px-3 py-1.5 rounded-full shadow-lg w-fit">
+                {product.highlight}
+             </div>
+           )}
+           <div className="bg-white/90 backdrop-blur-md text-brand-green text-[8px] font-black uppercase tracking-[0.3em] px-3 py-1.5 rounded-full shadow-sm w-fit border border-brand-green/10 flex items-center gap-2">
+              <ShieldCheck size={10} /> Certified
+           </div>
+        </div>
 
-        {/* Quick Add Visual */}
+        {/* Quick Add Overlay */}
         <div className="absolute inset-0 bg-brand-black/0 group-hover:bg-brand-black/5 transition-colors duration-700 flex items-center justify-center">
            <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-brand-orange shadow-2xl opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
               <Plus size={24} />
@@ -54,9 +59,29 @@ const ProductCard = ({ product }: ProductCardProps) => {
             {product.description}
          </p>
 
-         <div className="mt-auto pt-6 border-t border-brand-gray-mid flex items-center justify-between">
+         {/* Culinary Metadata */}
+         <div className="flex gap-4 mb-10 pb-6 border-b border-brand-gray-mid">
+            {product.cookingTime && (
+              <div className="flex items-center gap-2">
+                 <div className="w-8 h-8 rounded-full bg-brand-gray-light flex items-center justify-center text-brand-black/40">
+                    <Timer size={14} />
+                 </div>
+                 <span className="text-[10px] font-bold uppercase tracking-widest text-brand-gray-dark/60">{product.cookingTime}</span>
+              </div>
+            )}
+            {product.nutrition && product.nutrition.length > 0 && (
+              <div className="flex items-center gap-2">
+                 <div className="w-8 h-8 rounded-full bg-brand-gray-light flex items-center justify-center text-brand-orange/40">
+                    <Flame size={14} />
+                 </div>
+                 <span className="text-[10px] font-bold uppercase tracking-widest text-brand-orange">{product.nutrition[0]}</span>
+              </div>
+            )}
+         </div>
+
+         <div className="mt-auto flex items-center justify-between">
             <div className="flex flex-col">
-              <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">Price</span>
+              <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">Market Price</span>
               <span className="text-2xl font-black text-brand-black text-serif italic tracking-normal">{product.price}</span>
             </div>
             <button className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-brand-black/30 group-hover:text-brand-orange group-hover:gap-4 transition-all duration-500">
