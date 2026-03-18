@@ -83,8 +83,8 @@ const ProductCard = ({ product, onOpenModal }: ProductCardProps) => {
          <div className="mt-auto flex items-end justify-between">
             <div className="flex flex-col">
               <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-2 sm:mb-3">Heritage Selection</span>
-              <div className="flex items-end gap-1.5">
-                 <span className="text-[11px] font-black text-brand-black/20 uppercase tracking-widest mb-1 sm:mb-1.5">{currency}</span>
+              <div className="flex items-baseline gap-1.5">
+                 <span className="text-[10px] font-black text-brand-black/20 uppercase tracking-widest mb-0.5 sm:mb-1">{currency}</span>
                  <span className="text-3xl sm:text-[42px] font-black text-brand-black text-serif italic tracking-tighter group-hover:text-brand-orange transition-colors duration-500 leading-none">{amount}</span>
               </div>
             </div>

@@ -21,7 +21,7 @@ const HeritageJournal = () => {
         </div>
 
         {/* Recipe Grid: High-Impact Monoliths */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 lg:gap-x-16 gap-y-12 sm:gap-y-24">
            {recipes.map((recipe, i) => (
              <motion.div
                key={recipe.id}

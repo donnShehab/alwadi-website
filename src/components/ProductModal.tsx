@@ -113,13 +113,16 @@ const ProductModal = ({ product, isOpen, onClose }: ProductModalProps) => {
                </div>
 
                {/* Action Footer */}
-               <div className="pt-8 border-t border-brand-gray-mid flex items-center justify-between">
+               <div className="mt-8 pt-8 border-t border-brand-gray-mid flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
                   <div className="flex flex-col">
-                     <span className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.3em] mb-1">Market Listing</span>
-                     <div className="text-3xl font-black text-brand-black text-serif italic">{product.price}</div>
+                     <span className="text-[9px] font-bold text-gray-400 uppercase tracking-[0.3em] mb-2 leading-none">Market Listing</span>
+                     <div className="flex items-baseline gap-2">
+                        <span className="text-[11px] font-black text-brand-black/20 uppercase tracking-widest">{product.price.split(' ')[0]}</span>
+                        <div className="text-4xl font-black text-brand-black text-serif italic leading-none">{product.price.split(' ')[1]}</div>
+                     </div>
                   </div>
-                  <button className="btn-luxury !py-4 !px-8">
-                     Add To Basket
+                  <button className="btn-luxury !py-4 !px-10 w-full sm:w-auto text-center justify-center">
+                     Add To Selection
                   </button>
                </div>
             </div>
