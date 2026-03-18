@@ -10,7 +10,7 @@ const Footer = () => {
   }
 
   return (
-    <footer id="contact" className="bg-brand-white border-t border-brand-gray-mid pt-32 pb-20 overflow-hidden relative">
+    <footer id="footer" className="bg-brand-white border-t border-brand-gray-mid pt-32 pb-20 overflow-hidden relative">
       {/* Monumental Watermark */}
       <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 select-none pointer-events-none opacity-[0.03] text-[25vw] font-black tracking-tighter leading-none text-brand-black">
          ALWADI

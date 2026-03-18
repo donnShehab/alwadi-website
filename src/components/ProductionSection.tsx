@@ -6,7 +6,7 @@ import { ShieldCheck, Zap, Globe, Cpu } from 'lucide-react'
 
 const ProductionSection = () => {
   return (
-    <section id="about" className="bg-brand-white section-padding overflow-hidden">
+    <section id="factory" className="bg-brand-white section-padding overflow-hidden">
       <div className="max-width-container">
         <div className="flex flex-col lg:flex-row gap-20 lg:gap-40 items-center">
           

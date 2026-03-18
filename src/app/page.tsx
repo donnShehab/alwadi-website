@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import CategorySection from "@/components/CategorySection";
 import ProductSection from "@/components/ProductSection";
 import ProductionSection from "@/components/ProductionSection";
+import HeritageJournal from "@/components/HeritageJournal";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -11,9 +12,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CategorySection />
-      <ProductionSection />
       
-      {/* Immersive Product Categories */}
+      {/* Immersive Product Catalog */}
       <ProductSection
         category="Burger"
         id="burgers"
@@ -23,6 +23,12 @@ export default function Home() {
         category="Breaded"
         id="breaded"
       />
+
+      {/* Brand Lifestyle Layer */}
+      <HeritageJournal />
+
+      {/* Industrial Excellence Hub */}
+      <ProductionSection />
 
       <Footer />
     </main>
